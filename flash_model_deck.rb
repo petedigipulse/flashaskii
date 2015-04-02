@@ -12,7 +12,7 @@ class FlashCardDeck
   end
 
   def load_cards
-    CSV.read('./practise_question.csv').each do |line|
+    CSV.read('./flash_questions.csv').each do |line|
       line.chomp
       question =  line[0]
       answer = line[1]
