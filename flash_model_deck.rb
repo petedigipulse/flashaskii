@@ -1,25 +1,28 @@
 require_relative ('./flash_model_card')
 require 'csv'
 
-class FlashcardDeck
+class FlashCardDeck
 
   attr_reader :flashcards
 
-  def initialize(file)
+  def initialize
 
-    @file = file
     @flashcards = []
     load_cards
   end
 
   def load_cards
-    CSV.read(@file) do |line|
-      line[0] = question
-      line[1] = answer
+    CSV.read('./practise_question.csv').each do |line|
+      line.chomp
+      question =  line[0]
+      answer = line[1]
       @flashcards << FlashCard.new(question, answer)
     end
 
   end
 
-end
+  def next_card
+    @flashcards.shift
+  end
 
+end
