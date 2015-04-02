@@ -14,7 +14,7 @@ class FlashAsciiView
   end
 
   def correct_guess
-    puts "Way to go! Check out this flash Ascii art: /n/n"
+    puts "Way to go! Check out this flash Ascii art: \n\n"
   end
 
   def incorrect_guess
