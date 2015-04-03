@@ -4,9 +4,9 @@ class FlashCard
 
   attr_reader :question, :answer
 
-  def initialize(question, answer)
-    @question = question
-    @answer = answer
+  def initialize(args = {})
+    @question = args.fetch(:question)
+    @answer = args.fetch(:answer)
   end
 
 end
