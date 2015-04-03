@@ -2,6 +2,7 @@ class Ascii
 
   def initialize(file)
     @ascii = File.readlines(file)
+    @paths = Dir['./ascii_art/*']
   end
 
   def print_ascii
@@ -13,5 +14,9 @@ class Ascii
   end
 end
 
-new_art = Ascii.new('eugene.txt')
+def next_ascii
+  next_ascii = @paths.shift
+end
+
+new_art = Ascii.new('./ascii_art/josh.txt')
 new_art.print_ascii
