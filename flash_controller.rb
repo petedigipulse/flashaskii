@@ -33,7 +33,6 @@ class FlashController
 	end
 end
 
-
 ################ LOGIC ##################################################
 
 # Render Welcome
