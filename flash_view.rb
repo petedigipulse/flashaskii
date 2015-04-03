@@ -15,6 +15,7 @@ class FlashAsciiView
 
   def correct_guess
     puts "Way to go! You get some flash Ascii art.\n\n"
+    sleep(0.5)
   end
 
   def incorrect_guess
