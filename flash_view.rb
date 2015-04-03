@@ -1,7 +1,7 @@
 class FlashAsciiView
 
   def welcome_message
-    puts "Welcome to Flashascii, A Game For Flash Asses.\n\n"
+    puts "Welcome to Flashscii, A Game For Flash Asses.\n\n"
   end
 
   def display_question(question)
